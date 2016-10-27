@@ -47,19 +47,23 @@ public class DataManager implements PluginMessageListener, DataStream {
 		
 		case SIG_INFO:
 			
+			if (currentPlayer != null)
+				return;
+			
 			jaxInfo = JaxInfo.fromByteFormat(buffer);	// jax library function, native method
 			playerInfo = null;
+			currentPlayer = player.getName();
 			
 			break;
 			
 		case SIG_DATA:
 			
-			if (jaxInfo == null)
+			if (jaxInfo == null || !currentPlayer.equals(player.getName()))
 				return;
 			
 			Jax.decodeSequence(buffer, jaxInfo);	// jax library function, native method
 			playerInfo = PlayerInfo.fromByteData(player, buffer);
-			jaxInfo = null;
+			currentPlayer = null;
 			
 			break;
 		
