@@ -1,0 +1,19 @@
+name: SharkLauncher
+version: 1.0
+Author: Numixe & Atlas
+main: atlas.numixe.SharkLauncher
+commands:
+    haslauncher:
+        aliases: [launchmode]
+        usage: |
+            Syntax: /haslauncher <player>
+        description: Control is the player has logged with the launcher
+    launchmode:
+        aliases: [haslaunch]
+        usage: |
+            Syntax: /hlaunch <player>
+        description: Alias of /haslauncher
+    loglaunchmode:
+    	usage: |
+    	    Syntax: /loglaunchmode <player> [<reason>]
+    	description: Write in a configuration file the current time and if a player has logged with the launcher 
