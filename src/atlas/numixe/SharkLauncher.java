@@ -9,10 +9,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class SharkLauncher extends JavaPlugin {
 	
 	Register register;
+	EventManager events;
 
 	public void onEnable() {
 
 		register = new Register(this);
+		Bukkit.getServer().getPluginManager().registerEvents(events = new EventManager(), this);
 	}
 	
 	public void onDisable() {

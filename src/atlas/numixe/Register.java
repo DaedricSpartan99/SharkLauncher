@@ -6,7 +6,7 @@ import java.util.List;
 
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.plugin.Plugin;
 
 public class Register {
 	
@@ -14,9 +14,9 @@ public class Register {
 	 *  Config management, info and logs
 	 */
 	
-	JavaPlugin plugin;
+	Plugin plugin;
 	
-	public Register(JavaPlugin plugin) {
+	public Register(Plugin plugin) {
 		
 		this.plugin = plugin;
 		
