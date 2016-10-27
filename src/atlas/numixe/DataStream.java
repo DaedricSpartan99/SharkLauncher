@@ -2,5 +2,6 @@ package atlas.numixe;
 
 public interface DataStream {
 
-	public abstract byte[] getData();
+	public abstract PlayerInfo getPlayerInfo();
+	public abstract boolean isReadable();
 }
